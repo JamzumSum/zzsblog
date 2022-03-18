@@ -1,18 +1,12 @@
 ---
 date: "2019-12-13"
-layout: post
-title: 使用Exiv2修改图像的EXIF头信息
-subheading: Modify EXIF head using Exiv2
 author: JamzumSum
-categories: coding
-banner:
-  image: https://unsplash.com/photos/IuLgi9PWETU/download?force=true&w=1920
-tags: C++ exiv
+keywords: C++, exiv
 ---
 
 # 使用Exiv2修改图像的EXIF头信息
 
-上回我们说到, zzs写了一个下载必应美图的程序. 然而还没完, 我一直想改一下![这个东西](_static/exiv2/example.png)...当时注意力就在这些什么"详细信息"啊, "属性"之类的上面, 搜啊搜啊, 也没找到什么办法...
+写了一个下载必应美图的程序. 然而还没完, 我一直想改一下![这个东西](_static/exiv2/example.png)...当时注意力就在这些什么"详细信息"啊, "属性"之类的上面, 搜啊搜啊, 也没找到什么办法...
 
 今天早晨拿两个文件做对比试验, 于是发现修改了详细信息的文件(JPEG)会多出来一个"头部", 恍然大明白(捂脸), 一番搜索知道了这个叫`EXIF`头信息, 于是就有了下面这篇文章.
 
@@ -20,7 +14,7 @@ tags: C++ exiv
 
 > 我就不跟你们说我从哪找来这么个玩意儿的事了, 反正就是百度上搜两三个读写EXIF的库, 看看哪个好点...
 
-话说zzs从Exiv2的官网上下载了`2017msvc64`的build包, 加载到自己的项目里就炸了. 原因很奇怪, 说是没有`std::auto_ptr`这种类型. 当年看*Effective C++* 的时候见过这个类型, 肿么就没有了捏? 网上一查知道, `auto_ptr`这种类型在C++11的时候就已经废弃了, C++17时把它移除了. zzs的C++语言标准一直都是17, 所以没有这个类型.
+从Exiv2的官网上下载了`2017msvc64`的build包, 加载到自己的项目里就炸了. 原因很奇怪, 说是没有`std::auto_ptr`这种类型. 当年看*Effective C++* 的时候见过这个类型, 肿么就没有了捏? 网上一查知道, `auto_ptr`这种类型在C++11的时候就已经废弃了, C++17时把它移除了. C++语言标准一直都是17, 所以没有这个类型.
 
 我当时一寻思, 我是不太乐意改语言标准的, 因为我比较喜欢尝试新特性...所以就试着自己编译一下.
 
@@ -79,7 +73,7 @@ void BingPicker::addCopyRight(const QString& filepath, const QString& copyright)
 }
 ~~~
 
-额, 网上没有写入的例子, 我是在官网文档给的例子里找了一阵子把下面两句补上的. 你猜得没错, 写入是要保存的, `setExifData`和`writeMetadata`就是写入的关键, zzs之前只顾着找网上现成的抄, 运行了发现根本没写进去, 为此一顿好找...
+额, 网上没有写入的例子, 我是在官网文档给的例子里找了一阵子把下面两句补上的. 你猜得没错, 写入是要保存的, `setExifData`和`writeMetadata`就是写入的关键, 之前只顾着找网上现成的抄, 运行了发现根本没写进去, 为此一顿好找...
 
 上面`ExifData::operator[]`返回的是一个引用, 如果没有这个键值会直接新建一个(参考map的`operator[]`), 用法很直觉, 不用担心段错误.
 
@@ -89,4 +83,4 @@ void BingPicker::addCopyRight(const QString& filepath, const QString& copyright)
 
 照例感谢一万篇教程的作者们.
 
-想看源码的话, 这是zzs的必应美图下载器-> [GitHub](https://github.com/JamzumSum/BingPicker), 还有Release版本可供下载哦(滑稽)
+源码-> [GitHub](https://github.com/JamzumSum/BingPicker), 还有Release版本可供下载哦(滑稽)

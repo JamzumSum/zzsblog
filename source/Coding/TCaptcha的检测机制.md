@@ -1,13 +1,7 @@
 ---
 date: "2021-08-18"
-layout: post
-title: TCaptcha的检测机制
-subheading: Tcaptcha Detect Mechanism
 author: JamzumSum
-categories: crawler
-banner:
-  image: _static/tdx/squarrel.png
-tags: crawler QQQR Qzone Qzone2TG
+keywords: crawler, QQQR, Qzone, Qzone2TG
 ---
 
 # TCaptcha的检测机制

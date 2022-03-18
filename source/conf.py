@@ -31,7 +31,8 @@ release = '0.1.0'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'myst_parser'
+    'myst_parser',
+    'sphinx.ext.githubpages'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -66,7 +67,9 @@ html_static_path = ['_static']
 html_logo = "_static/favicon.png"
 html_theme_options = {
   "external_links": [
-      ("关于", "https://zzsblog.top/about.html"),
+      ("首页", "index.html"),
+      ("关于", "about.html"),
+      ("捐赠", "_static/merger.html"),
       ("GitHub", "https://github.com/JamzumSum/zzsblog.github.io"),
   ]
 }

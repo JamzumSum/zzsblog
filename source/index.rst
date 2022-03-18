@@ -9,15 +9,12 @@
 .. toctree::
    :maxdepth: 1
    :caption: 分类
+   :hidden:
 
-   Coding/index.rst
-   Products/index.rst
-   Research/index.md
+   Coding <Coding/index.rst>
+   Products <Products/index.rst>
+   Research <Research/index.md>
 
-
-
-索引
-==================
 
 * :ref:`genindex`
 * :ref:`search`

@@ -1,13 +1,7 @@
 ---
 date: "2021-08-07"
-layout: post
-title: Pytorch定位NaN
-subheading: Locate NaN in a Algorithm using PyTorch
 author: JamzumSum
-categories: coding
-banner:
-  image: https://unsplash.com/photos/4LurEHsc1uk/download?force=true&w=1920
-tags: PyTorch
+keywords: PyTorch
 ---
 
 # Pytorch定位NaN

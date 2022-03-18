@@ -1,8 +1,11 @@
-Products
+目录
 ==============
 
-.. toctree::
-   :maxdepth: 2
-   :caption: 文章目录
+我开发的公开使用的产品
 
-   Qzone3TG/index.md
+.. toctree::
+   :name: productstoc
+   :glob:
+   :maxdepth: 1
+
+   Qzone3TG/*
