@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "zzsblog.github.io"
+version = "0.1.0"
+description = "zzsblog"
+authors = ["JamzumSum <zzzzss990315@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.dev-dependencies]
+Sphinx = "^4.4.0"
+myst-parser = "^0.17.0"
+sphinx-press-theme = "^0.8.0"
+
+[[tool.poetry.source]]
+name = "tsinghua"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

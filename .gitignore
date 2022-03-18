@@ -1,0 +1,12 @@
+# venv
+/venv
+.venv
+
+# build, metadata, etc.
+build
+
+# platform specific
+make.bat
+
+# local config
+.vscode
