@@ -4,6 +4,7 @@
 
 # build, metadata, etc.
 build
+poetry.lock
 
 # platform specific
 make.bat
