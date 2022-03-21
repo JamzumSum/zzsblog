@@ -1,7 +1,8 @@
 ---
 date: "2019-12-13"
 author: JamzumSum
-keywords: C++, exiv
+html_meta:
+    keywords: C++, exiv
 ---
 
 # 使用Exiv2修改图像的EXIF头信息
@@ -30,7 +31,7 @@ keywords: C++, exiv
 
 然后呢, 我这是报了个错, 说是找不到`EXPAT`, 我百度了一下都是英文, 索性也不看了, 就用`vcpkg`装了一个...
 
-```
+```{code-block} shell
 vcpkg install expat:x64-windows
 ```
 
@@ -42,13 +43,13 @@ vcpkg install expat:x64-windows
 
 下一步, 告诉编译器我要C++17标准的, 这个找了半天, 我下面写一段代码, __不保证一定是对的__, 我只能说我编译出来了, 而且用起来没问题.
 
-~~~ cmake
+```{code-block} cmake
 include(CheckCXXCompilerFlag)
 CHECK_CXX_COMPILER_FLAG("/std:c++17" _cpp_17_flag_supported)
 if (_cpp_17_flag_supported)
     add_compile_options("/std:c++17")
 endif()
-~~~
+```
 
 把上面这段代码附加到`Cmakelists.txt`末尾, 全部生成, 一切正常. 安装exiv2, 完毕.
 
@@ -58,7 +59,7 @@ endif()
 
 > 本来网上有几篇写这个的, 但我为什么还要写一遍呢? 因为网上的(至少是我看见的)都是读EXIF信息, 没有写入的, 为此我绕了个弯子, 所以发出来给大伙瞧瞧写入照比读取要多了什么(你能猜到罢?)
 
-~~~ C++
+```{code-block} cpp
 void BingPicker::addCopyRight(const QString& filepath, const QString& copyright) {
     using namespace Exiv2;
     //这改成unique_ptr了, 发现没?
@@ -71,7 +72,7 @@ void BingPicker::addCopyRight(const QString& filepath, const QString& copyright)
     image->setExifData(ed);         //note this
     image->writeMetadata();
 }
-~~~
+```{code-block}
 
 额, 网上没有写入的例子, 我是在官网文档给的例子里找了一阵子把下面两句补上的. 你猜得没错, 写入是要保存的, `setExifData`和`writeMetadata`就是写入的关键, 之前只顾着找网上现成的抄, 运行了发现根本没写进去, 为此一顿好找...
 

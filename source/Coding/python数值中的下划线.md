@@ -1,14 +1,15 @@
 ---
 date: "2021-08-05"
 author: JamzumSum
-keywords: Python
+html_meta:
+    keywords: Python
 ---
 
 # Python 数值中的下划线
 
 直入主题，看一下矛盾所在：
 
-~~~ python
+~~~{code-block} python
 float(0_0)  # 0.0
 float(0_0_0_0_0_0_0)  # 0.0
 ~~~
@@ -17,7 +18,7 @@ float(0_0_0_0_0_0_0)  # 0.0
 
 再看这样一个例子大概能明白过来：
 
-~~~ python
+~~~{code-block} python
 float(1_0)  # 10.0
 float(12_000) # 12000.0
 ~~~

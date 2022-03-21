@@ -32,6 +32,7 @@ release = '0.1.0'
 # ones.
 extensions = [
     'myst_parser',
+    'sphinx.ext.mathjax',
     'sphinx.ext.githubpages'
 ]
 
@@ -48,7 +49,7 @@ language = 'zh_CN'
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = []
+exclude_patterns = ['_snippets']
 
 
 # -- Options for HTML output -------------------------------------------------
@@ -63,13 +64,29 @@ html_theme = 'press'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
+# customized sidebar
+html_sidebars = { '**': ['util/searchbox.html', 'util/sidebar.html'] }
+
+# additional pages
+html_additional_pages = {
+  'donate': 'merger.html'
+}
+
+html_baseurl = "www.zzsblog.top"
+
 # press-theme configs
 html_logo = "_static/favicon.png"
 html_theme_options = {
   "external_links": [
       ("首页", "index.html"),
       ("关于", "about.html"),
-      ("捐赠", "_static/merger.html"),
+      ("捐赠", "donate.html"),
       ("GitHub", "https://github.com/JamzumSum/zzsblog.github.io"),
   ]
+}
+
+# myst configs
+myst_enable_extensions = ["dollarmath", "substitution"]
+myst_substitutions = {
+  "cname": html_baseurl
 }

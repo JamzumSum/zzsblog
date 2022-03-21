@@ -1,7 +1,8 @@
 ---
 date: "2021-08-07"
 author: JamzumSum
-keywords: PyTorch
+html_meta:
+    keywords: PyTorch
 ---
 
 # Pytorch定位NaN
@@ -14,14 +15,14 @@ keywords: PyTorch
 
 ### #1 正向传播异常侦测
 
-~~~ python
+~~~{code-block} python
 torch.autograd.set_detect_anomaly(True)
 ~~~
 如题, forward时出现NaN即时报错. 尽管说得好听, 但有的时候并不能准确地定位问题所在. 属于调试NaN的必要辅助.
 
 ### #2 反向传播异常侦测
 
-~~~ python
+~~~{code-block} python
 # loss = model(X)
 with torch.autograd.detect_anomaly():
     loss.backward()
@@ -33,7 +34,7 @@ with torch.autograd.detect_anomaly():
 assert是确保程序行为正确的重要手段. 对于一个算法来说, 出现NaN不管怎么说都意味着不正常. 同时, 对debug来说, 最重要的就是找到事发现场, 而assert正是寻找真正现场的利器.
 
 在pytorch中, 检查NaN的函数为`torch.isnan(T)`. 于是我们可以构造如下断言:
-~~~ python
+~~~{code-block} python
 assert not torch.any(torch.isnan(T))
 ~~~
 
@@ -62,7 +63,7 @@ assert not torch.any(torch.isnan(T))
 这种问题运气好的话会被#1 正向异常检测直接找到, 但通常是找到一个漂移了亿点点的位置. 推荐用#3 assert的办法, 尤其是 __自己写了loss时__, 在关键位置放几个assert守门, 总归是没错的.
 
 注意, 绝大多数时候, inf也是不合常理的存在. 因此你可能也需要同时寻找inf:
-~~~ python
+~~~{code-block} python
 assert not torch.any(torch.isnan(T) + torch.isinf(T))
 ~~~
 
@@ -71,7 +72,7 @@ assert not torch.any(torch.isnan(T) + torch.isinf(T))
 NaN的次常见成因. 顾名思义, 出现NaN仅仅是因为数据里含有NaN. 通常来说直接读图片不会出现NaN, 往往是大意地处理数据后会出现这种情况.
 
 随便举个例子. 
-~~~ python
+~~~{code-block} python
 mask = mask / mask.max()
 # serialize mask
 ~~~

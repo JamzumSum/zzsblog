@@ -1,7 +1,8 @@
 ---
 date: "2021-08-18"
 author: JamzumSum
-keywords: crawler, QQQR, Qzone, Qzone2TG
+html_meta:
+    keywords: crawler, tcaptcha, Qzone, Qzone2TG
 ---
 
 # TCaptcha的检测机制
