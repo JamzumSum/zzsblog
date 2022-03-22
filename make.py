@@ -29,13 +29,9 @@ def news():
             with open(pp, encoding="utf8") as f:
                 fm = next(filter(lambda t: t.type == "front_matter", to_tokens(f.read())), None)
                 if fm:
-                    sdate = yaml.safe_load(fm.content).get("date", "")
-                    try:
-                        ddate = datetime.strptime(sdate, "%Y-%m-%d")
-                        ddate.replace(tzinfo=TZ)
-                        ts = ddate.timestamp()
-                    except ValueError:
-                        pass
+                    ddate: date = yaml.safe_load(fm.content).get("date", None)
+                    if ddate:
+                        ts = datetime(ddate.year, ddate.month, ddate.day, tzinfo=TZ).timestamp()
             if ts == 0:
                 ts = pp.stat().st_mtime
             d[ts] = pp
