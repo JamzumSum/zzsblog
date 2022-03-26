@@ -6,9 +6,9 @@ on:
       - sphinx
     paths:
       - source/**
-      - .github/workflows/*
-      - requirements.txt
-    workflow_dispatch:
+      - .github/workflows/sphinx.yml
+      - pyproject.toml
+  workflow_dispatch:
 
 jobs:
   publish:
@@ -31,9 +31,9 @@ jobs:
           virtualenvs-in-project: true
       - name: Export requirements.txt
         id: version_step
-        run: poetry export -vvv --dev  --without-hashes -o requirements.txt
+        run: poetry export --dev  --without-hashes -o requirements.txt
       #----------------------------------------------
-      # install your root project, if required
+      #   install your root project, if required
       #----------------------------------------------
       - name: Install library
         run: poetry install --no-interaction --no-root
@@ -45,10 +45,7 @@ jobs:
           poetry run python make.py
 
       - name: Build HTML
-        uses: ammaraskar/sphinx-action@master
-        with:
-          docs-folder: '.'
-          path: build/html
+        run: poetry run sphinx-build source build/html
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

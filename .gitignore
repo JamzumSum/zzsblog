@@ -5,9 +5,9 @@
 # build, metadata, etc.
 build
 poetry.lock
-
-# platform specific
 make.bat
+Makefile
+source/_snippets/news.md
 
 # local config
 .vscode
