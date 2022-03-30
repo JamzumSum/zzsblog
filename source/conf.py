@@ -53,32 +53,26 @@ exclude_patterns = ["_snippets"]
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = "press"
+html_theme = "furo"
+html_title = project
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static"]
 
-# customized sidebar
-html_sidebars = {"**": ["util/searchbox.html", "util/sidebar.html"]}
-
 # additional pages
 html_additional_pages = {"donate": "merger.html"}
 
-html_baseurl = "www.zzsblog.top"
+html_baseurl = "zzsblog.top"
 html_search_language = "zh"
 html_favicon = "_static/favicon.png"
-html_logo = html_favicon
-
-# press-theme configs
 html_theme_options = {
-    "external_links": [
-        ("首页", "index.html"),
-        ("关于", "about.html"),
-        ("捐赠", "donate.html"),
-        ("GitHub", "https://github.com/JamzumSum/zzsblog.github.io"),
-    ]
+    "light_css_variables": {
+        "font-stack": '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif',
+        "color-brand-primary": "#3eaf7c",
+        "color-brand-content": "#3eaf7c",
+    }
 }
 
 # myst configs
