@@ -61,6 +61,11 @@ html_title = project
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static"]
 
+html_css_files = [
+    "css/landing.css",
+    "css/anim-border.css",
+]
+
 # additional pages
 html_additional_pages = {"donate": "merger.html"}
 
