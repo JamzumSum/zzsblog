@@ -72,6 +72,7 @@ html_additional_pages = {"donate": "merger.html"}
 html_baseurl = "zzsblog.top"
 html_search_language = "zh"
 html_favicon = "_static/favicon.png"
+html_logo = html_favicon
 html_theme_options = {
     "light_css_variables": {
         "font-stack": '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif',
