@@ -11,6 +11,20 @@
     },
     "items": [
         {
+            "id": "https://zzsblog.top/publii-shou-dong-tong-bu-gitcang-ku.html",
+            "url": "https://zzsblog.top/publii-shou-dong-tong-bu-gitcang-ku.html",
+            "title": "Publii 手动同步Git仓库",
+            "summary": "假设设置的分支名是gh-pages： Publii本地分支只有一个提交，把本地提交的内容打包成一个新提交直接放在远端之上： git fetch origin gh-pages # HEAD 移到远端最新提交，但保留本地文件改动 git reset --soft&hellip;",
+            "content_html": "<p>假设设置的分支名是<code>gh-pages</code>：</p><p>Publii本地分支只有一个提交，把本地提交的内容打包成一个新提交直接放在远端之上：</p><pre><code class=\"language-sh\">git fetch origin gh-pages\n# HEAD 移到远端最新提交，但保留本地文件改动\ngit reset --soft origin/gh-pages \n# 用原来本地提交的 message 重新提交\ngit commit -C &quot;HEAD@{1}&quot;\ngit push origin gh-pages\n</code></pre>\n",
+            "author": {
+                "name": "JamzumSum"
+            },
+            "tags": [
+            ],
+            "date_published": "2026-06-12T00:01:27+08:00",
+            "date_modified": "2026-06-12T00:01:27+08:00"
+        },
+        {
             "id": "https://zzsblog.top/enable-typing-for-yacs-config.html",
             "url": "https://zzsblog.top/enable-typing-for-yacs-config.html",
             "title": "为yacs配置开启类型检查和自动补全",
