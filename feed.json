@@ -5,7 +5,7 @@
     "home_page_url": "https://zzsblog.top",
     "feed_url": "https://zzsblog.top/feed.json",
     "user_comment": "",
-    "icon": "https://zzsblog.top/media/website/favicon-2.png",
+    "icon": "https://zzsblog.top/media/website/icons8-pigeon-96-2.png",
     "author": {
         "name": "JamzumSum"
     },
@@ -67,7 +67,7 @@
                 "name": "JamzumSum"
             },
             "tags": [
-                   "MatLab",
+                   "MATLAB",
                    "Coding"
             ],
             "date_published": "2022-08-26T15:38:03+08:00",
