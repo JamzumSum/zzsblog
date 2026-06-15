@@ -3,12 +3,62 @@
     <title>鸽园</title>
     <link href="https://zzsblog.top/feed.xml" rel="self" />
     <link href="https://zzsblog.top" />
-    <updated>2026-06-13T23:44:30+08:00</updated>
+    <updated>2026-06-15T20:32:53+08:00</updated>
     <author>
         <name>JamzumSum</name>
     </author>
     <id>https://zzsblog.top</id>
 
+    <entry>
+        <title>记一次多线程排障</title>
+        <author>
+            <name>JamzumSum</name>
+        </author>
+        <link href="https://zzsblog.top/ji-yi-ci-duo-xian-cheng-pai-zhang.html"/>
+        <id>https://zzsblog.top/ji-yi-ci-duo-xian-cheng-pai-zhang.html</id>
+            <category term="Coding"/>
+            <category term="C++"/>
+
+        <updated>2026-06-15T20:32:15+08:00</updated>
+            <summary type="html">
+                <![CDATA[
+                    问题：一个简单的SPSC模型，消费者线程执行一次循环就退出。 问题代码大致是这样： class DumperThread { protected: DumpQueue queue_; std::thread thread_; alignas(64) std::atomic_bool&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p><strong>问题</strong>：一个简单的SPSC模型，消费者线程执行一次循环就退出。</p><p>问题代码大致是这样：</p><pre><code class="language-cpp">class DumperThread
+{
+protected:
+    DumpQueue queue_;
+    std::thread thread_;
+    alignas(64) std::atomic_bool running {false};
+
+public:
+    DumperThread(): queue_(), thread_(&amp;DumperThread::run, this) {}
+
+    void run()
+    {
+        running.store(true);
+        while (running.load())
+        {
+            auto fut = std::move(queue_.pop());
+            fut.get();
+        }
+    }
+}
+</code></pre>
+<h2 id="分析">分析</h2>
+<p>调试初期发现 <code>running</code> 在 <code>queue_.pop()</code> 时变为 <code>false</code>，百思不得其解。一开始考虑可能是 <code>queue</code> 里面哪里写越界了，或者 <code>DumperThread</code> 对象本身析构了。</p><p>多次调试偶然注意到 <code>running</code> 变为 <code>false</code> 的时机不确定，开始考虑可能是数据竞争。再仔细分析代码，发现 <code>thread_(&amp;DumperThread::run, this)</code> 在初始化时构造，构造后线程已经可能开始运行。由于C++的初始化顺序是按照声明顺序，因此 <code>running</code> 在 <code>thread_</code> 之后初始化，可能在 <code>run</code> 内部的赋值之后初始化，从而造成线程状态错误，循环退出。</p><h2 id="修改">修改</h2>
+<p>修改也很简单，将两者声明顺序调换，确保初始化 <code>running</code> 之后线程才可能开始运行：</p><pre><code class="language-cpp">protected:
+    DumpQueue queue_;
+    alignas(64) std::atomic_bool running {false};
+    std::thread thread_;
+</code></pre>
+
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Publii 手动同步Git仓库</title>
         <author>
@@ -568,36 +618,6 @@ with torch.autograd.detect_anomaly():
 <li>若计算 loss 的过程中没有发现问题，且总是触发反向传播异常，那可以考虑从理论上检查梯度爆炸和梯度消失</li>
 </ol>
 
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Python 数值中的下划线是什么意思？</title>
-        <author>
-            <name>JamzumSum</name>
-        </author>
-        <link href="https://zzsblog.top/underscore-in-python-number.html"/>
-        <id>https://zzsblog.top/underscore-in-python-number.html</id>
-            <category term="Python"/>
-            <category term="Coding"/>
-
-        <updated>2021-08-05T20:10:00+08:00</updated>
-            <summary type="html">
-                <![CDATA[
-                    直入主题，看一下矛盾所在： float(0_0) # 0.0 float(0_0_0_0_0_0_0) # 0.0 从其他语言转入 Python 且未系统学习过的开发者，看到这样的写法大概一时难以接受。 不过再看一个例子，或许就能理解其中的用意了： float(1_0)&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p>直入主题，看一下矛盾所在：</p><pre><code class="language-{code-block}">float(0_0)  # 0.0
-float(0_0_0_0_0_0_0)  # 0.0
-</code></pre>
-<p>从其他语言转入 Python 且未系统学习过的开发者，看到这样的写法大概一时难以接受。</p><p>不过再看一个例子，或许就能理解其中的用意了：</p><pre><code class="language-{code-block}">float(1_0)  # 10.0
-float(12_000) # 12000.0
-</code></pre>
-<p>Python 数值字面量中的下划线仅起视觉分隔作用，解析时等价于直接去除下划线。</p><blockquote>
-<p>This PEP proposes to extend Python’s syntax and number-from-string constructors so that underscores can be used as visual separators for digit grouping purposes in integral, floating-point and complex number literals.</p></blockquote>
-<p><a href="https://peps.python.org/pep-0515/">PEP 515</a>，Python 3.6+。</p>
             ]]>
         </content>
     </entry>

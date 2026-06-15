@@ -11,6 +11,22 @@
     },
     "items": [
         {
+            "id": "https://zzsblog.top/ji-yi-ci-duo-xian-cheng-pai-zhang.html",
+            "url": "https://zzsblog.top/ji-yi-ci-duo-xian-cheng-pai-zhang.html",
+            "title": "记一次多线程排障",
+            "summary": "问题：一个简单的SPSC模型，消费者线程执行一次循环就退出。 问题代码大致是这样： class DumperThread { protected: DumpQueue queue_; std::thread thread_; alignas(64) std::atomic_bool&hellip;",
+            "content_html": "<p><strong>问题</strong>：一个简单的SPSC模型，消费者线程执行一次循环就退出。</p><p>问题代码大致是这样：</p><pre><code class=\"language-cpp\">class DumperThread\n{\nprotected:\n    DumpQueue queue_;\n    std::thread thread_;\n    alignas(64) std::atomic_bool running {false};\n\npublic:\n    DumperThread(): queue_(), thread_(&amp;DumperThread::run, this) {}\n\n    void run()\n    {\n        running.store(true);\n        while (running.load())\n        {\n            auto fut = std::move(queue_.pop());\n            fut.get();\n        }\n    }\n}\n</code></pre>\n<h2 id=\"分析\">分析</h2>\n<p>调试初期发现 <code>running</code> 在 <code>queue_.pop()</code> 时变为 <code>false</code>，百思不得其解。一开始考虑可能是 <code>queue</code> 里面哪里写越界了，或者 <code>DumperThread</code> 对象本身析构了。</p><p>多次调试偶然注意到 <code>running</code> 变为 <code>false</code> 的时机不确定，开始考虑可能是数据竞争。再仔细分析代码，发现 <code>thread_(&amp;DumperThread::run, this)</code> 在初始化时构造，构造后线程已经可能开始运行。由于C++的初始化顺序是按照声明顺序，因此 <code>running</code> 在 <code>thread_</code> 之后初始化，可能在 <code>run</code> 内部的赋值之后初始化，从而造成线程状态错误，循环退出。</p><h2 id=\"修改\">修改</h2>\n<p>修改也很简单，将两者声明顺序调换，确保初始化 <code>running</code> 之后线程才可能开始运行：</p><pre><code class=\"language-cpp\">protected:\n    DumpQueue queue_;\n    alignas(64) std::atomic_bool running {false};\n    std::thread thread_;\n</code></pre>\n",
+            "author": {
+                "name": "JamzumSum"
+            },
+            "tags": [
+                   "Coding",
+                   "C++"
+            ],
+            "date_published": "2026-06-15T20:32:15+08:00",
+            "date_modified": "2026-06-15T20:32:53+08:00"
+        },
+        {
             "id": "https://zzsblog.top/publii-shou-dong-tong-bu-gitcang-ku.html",
             "url": "https://zzsblog.top/publii-shou-dong-tong-bu-gitcang-ku.html",
             "title": "Publii 手动同步Git仓库",
@@ -155,22 +171,6 @@
             ],
             "date_published": "2021-08-07T20:33:00+08:00",
             "date_modified": "2026-06-13T22:55:43+08:00"
-        },
-        {
-            "id": "https://zzsblog.top/underscore-in-python-number.html",
-            "url": "https://zzsblog.top/underscore-in-python-number.html",
-            "title": "Python 数值中的下划线是什么意思？",
-            "summary": "直入主题，看一下矛盾所在： float(0_0) # 0.0 float(0_0_0_0_0_0_0) # 0.0 从其他语言转入 Python 且未系统学习过的开发者，看到这样的写法大概一时难以接受。 不过再看一个例子，或许就能理解其中的用意了： float(1_0)&hellip;",
-            "content_html": "<p>直入主题，看一下矛盾所在：</p><pre><code class=\"language-{code-block}\">float(0_0)  # 0.0\nfloat(0_0_0_0_0_0_0)  # 0.0\n</code></pre>\n<p>从其他语言转入 Python 且未系统学习过的开发者，看到这样的写法大概一时难以接受。</p><p>不过再看一个例子，或许就能理解其中的用意了：</p><pre><code class=\"language-{code-block}\">float(1_0)  # 10.0\nfloat(12_000) # 12000.0\n</code></pre>\n<p>Python 数值字面量中的下划线仅起视觉分隔作用，解析时等价于直接去除下划线。</p><blockquote>\n<p>This PEP proposes to extend Python’s syntax and number-from-string constructors so that underscores can be used as visual separators for digit grouping purposes in integral, floating-point and complex number literals.</p></blockquote>\n<p><a href=\"https://peps.python.org/pep-0515/\">PEP 515</a>，Python 3.6+。</p>",
-            "author": {
-                "name": "JamzumSum"
-            },
-            "tags": [
-                   "Python",
-                   "Coding"
-            ],
-            "date_published": "2021-08-05T20:10:00+08:00",
-            "date_modified": "2026-06-13T22:48:47+08:00"
         }
     ]
 }
