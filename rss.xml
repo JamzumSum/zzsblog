@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Reinterpret</title>
+    <link>https://zzsblog.top/</link>
+    <description>Lire, c'est toujours relire.</description>
+    <language>en-us</language>
+    <item>
+      <title>记一次多线程排障</title>
+      <link>https://zzsblog.top/blog/data-racing-caused-by-init-order</link>
+      <guid isPermaLink="true">https://zzsblog.top/blog/data-racing-caused-by-init-order</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <dc:creator>JamzumSum</dc:creator>
+      <description>排查因初始化顺序导致的多线程数据竞争</description>
+    </item>
+    <item>
+      <title>Publii 手动同步Git仓库</title>
+      <link>https://zzsblog.top/blog/publii-shou-dong-tong-bu-gitcang-ku</link>
+      <guid isPermaLink="true">https://zzsblog.top/blog/publii-shou-dong-tong-bu-gitcang-ku</guid>
+      <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
+      <dc:creator>JamzumSum</dc:creator>
+      <description>通过soft reset手动同步Publii output到Git仓库</description>
+    </item>
+    <item>
+      <title>为 YACS 配置开启类型检查和自动补全</title>
+      <link>https://zzsblog.top/blog/enable-typing-for-yacs-config</link>
+      <guid isPermaLink="true">https://zzsblog.top/blog/enable-typing-for-yacs-config</guid>
+      <pubDate>Wed, 05 Oct 2022 00:00:00 GMT</pubDate>
+      <dc:creator>JamzumSum</dc:creator>
+      <description>通过type stub为yacs配置提供IDE类型信息和代码补全</description>
+    </item>
+    <item>
+      <title>VS Code 中的 MATLAB 环境</title>
+      <link>https://zzsblog.top/blog/run-matlab-in-vscode-jupyter</link>
+      <guid isPermaLink="true">https://zzsblog.top/blog/run-matlab-in-vscode-jupyter</guid>
+      <pubDate>Fri, 26 Aug 2022 00:00:00 GMT</pubDate>
+      <dc:creator>JamzumSum</dc:creator>
+      <description>在VS Code Jupyter Notebook中运行MATLAB kernel</description>
+    </item>
+    <item>
+      <title>如何修改图像的 EXIF 头信息？</title>
+      <link>https://zzsblog.top/blog/edit-exif-header</link>
+      <guid isPermaLink="true">https://zzsblog.top/blog/edit-exif-header</guid>
+      <pubDate>Sun, 31 Jul 2022 00:00:00 GMT</pubDate>
+      <dc:creator>JamzumSum</dc:creator>
+      <description>使用exiv2修改图像的EXIF头信息</description>
+    </item>
+    <item>
+      <title>re.sub如何异步替换？</title>
+      <link>https://zzsblog.top/blog/async-re-sub</link>
+      <guid isPermaLink="true">https://zzsblog.top/blog/async-re-sub</guid>
+      <pubDate>Sun, 31 Jul 2022 00:00:00 GMT</pubDate>
+      <dc:creator>JamzumSum</dc:creator>
+      <description>Python异步正则替换</description>
+    </item>
+    <item>
+      <title>不能连外网的机器怎么搭环境？</title>
+      <link>https://zzsblog.top/blog/ssh-reverse-proxy</link>
+      <guid isPermaLink="true">https://zzsblog.top/blog/ssh-reverse-proxy</guid>
+      <pubDate>Tue, 12 Apr 2022 00:00:00 GMT</pubDate>
+      <dc:creator>JamzumSum</dc:creator>
+      <description>如何通过SSH建立反向代理</description>
+    </item>
+    <item>
+      <title>Python 如何解析不规则 JSON？</title>
+      <link>https://zzsblog.top/blog/parsing-irregular-json</link>
+      <guid isPermaLink="true">https://zzsblog.top/blog/parsing-irregular-json</guid>
+      <pubDate>Tue, 22 Mar 2022 00:00:00 GMT</pubDate>
+      <dc:creator>JamzumSum</dc:creator>
+      <description>用demjson | 手写解析器 | Python ast解析解析不规则JSON</description>
+    </item>
+    <item>
+      <title>TCaptcha 有哪些检测机制？</title>
+      <link>https://zzsblog.top/blog/tcaptcha</link>
+      <guid isPermaLink="true">https://zzsblog.top/blog/tcaptcha</guid>
+      <pubDate>Wed, 18 Aug 2021 00:00:00 GMT</pubDate>
+      <dc:creator>JamzumSum</dc:creator>
+      <description>What does TCaptcha detect and collect?</description>
+    </item>
+    <item>
+      <title>PyTorch 如何定位 NaN？</title>
+      <link>https://zzsblog.top/blog/pytorch-detect-nan</link>
+      <guid isPermaLink="true">https://zzsblog.top/blog/pytorch-detect-nan</guid>
+      <pubDate>Sat, 07 Aug 2021 00:00:00 GMT</pubDate>
+      <dc:creator>JamzumSum</dc:creator>
+      <description>通过 detect_anomaly、assert 等方法定位深度学习中的 NaN 异常，以及一些常见的问题原因</description>
+    </item>
+    <item>
+      <title>Python 数值中的下划线是什么意思？</title>
+      <link>https://zzsblog.top/blog/underscore-in-python-number</link>
+      <guid isPermaLink="true">https://zzsblog.top/blog/underscore-in-python-number</guid>
+      <pubDate>Thu, 05 Aug 2021 00:00:00 GMT</pubDate>
+      <dc:creator>JamzumSum</dc:creator>
+      <description>What's the meaning of the underscores in Python number?</description>
+    </item>
+  </channel>
+</rss>

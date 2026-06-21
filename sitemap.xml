@@ -1,107 +1,145 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="https://zzsblog.top/sitemap.xsl"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-<url>
-<loc>https://zzsblog.top/</loc>
-</url>
-<url>
-<loc>https://zzsblog.top/async-re-sub.html</loc>
-<lastmod>2026-06-13T23:24:26+08:00</lastmod>
-<image:image>
-<image:loc>https://zzsblog.top/media/posts/1/download1-2</image:loc>
-<image:title><![CDATA[two white flying rockets during daytime]]></image:title>
-</image:image>
-</url>
-<url>
-<loc>https://zzsblog.top/donate.html</loc>
-<lastmod>2026-06-19T22:24:23+08:00</lastmod>
-</url>
-<url>
-<loc>https://zzsblog.top/edit-exif-header.html</loc>
-<lastmod>2026-06-13T23:26:05+08:00</lastmod>
-<image:image>
-<image:loc>https://zzsblog.top/media/posts/3/download2</image:loc>
-<image:title><![CDATA[white wooden block table]]></image:title>
-</image:image>
-<image:image>
-<image:loc>https://zzsblog.top/media/posts/3/example.png</image:loc>
-<image:title><![CDATA[这个东西]]></image:title>
-</image:image>
-</url>
-<url>
-<loc>https://zzsblog.top/enable-typing-for-yacs-config.html</loc>
-<lastmod>2026-06-13T23:39:48+08:00</lastmod>
-<image:image>
-<image:loc>https://zzsblog.top/media/posts/10/download1</image:loc>
-<image:title><![CDATA[爷又更新辣]]></image:title>
-</image:image>
-</url>
-<url>
-<loc>https://zzsblog.top/ji-yi-ci-duo-xian-cheng-pai-zhang.html</loc>
-<lastmod>2026-06-15T20:32:53+08:00</lastmod>
-<image:image>
-<image:loc>https://zzsblog.top/media/posts/14/wallhaven-4x6d6z_1280x800.png</image:loc>
-<image:title><![CDATA[4x6d6z]]></image:title>
-</image:image>
-</url>
-<url>
-<loc>https://zzsblog.top/parsing-irregular-json.html</loc>
-<lastmod>2026-06-13T23:16:09+08:00</lastmod>
-<image:image>
-<image:loc>https://zzsblog.top/media/posts/4/download1</image:loc>
-<image:title><![CDATA[brown brick pavement]]></image:title>
-</image:image>
-</url>
-<url>
-<loc>https://zzsblog.top/publii-shou-dong-tong-bu-gitcang-ku.html</loc>
-<lastmod>2026-06-13T23:44:30+08:00</lastmod>
-<image:image>
-<image:loc>https://zzsblog.top/media/posts/13/wallhaven-45e135_1280x720.png</image:loc>
-<image:title><![CDATA[45e135]]></image:title>
-</image:image>
-</url>
-<url>
-<loc>https://zzsblog.top/pytorch-detect-nan.html</loc>
-<lastmod>2026-06-13T22:55:43+08:00</lastmod>
-<image:image>
-<image:loc>https://zzsblog.top/media/posts/6/download1-3</image:loc>
-<image:title><![CDATA[orange and black bug on green leaf]]></image:title>
-</image:image>
-</url>
-<url>
-<loc>https://zzsblog.top/run-matlab-in-vscode-jupyter.html</loc>
-<lastmod>2026-06-13T23:34:44+08:00</lastmod>
-<image:image>
-<image:loc>https://zzsblog.top/media/posts/9/download1</image:loc>
-<image:title><![CDATA[]]></image:title>
-</image:image>
-</url>
-<url>
-<loc>https://zzsblog.top/ssh-reverse-proxy.html</loc>
-<lastmod>2026-06-13T23:20:36+08:00</lastmod>
-<image:image>
-<image:loc>https://zzsblog.top/media/posts/7/download1</image:loc>
-<image:title><![CDATA[person holding black camera lens]]></image:title>
-</image:image>
-</url>
-<url>
-<loc>https://zzsblog.top/tcaptcha.html</loc>
-<lastmod>2026-06-13T23:07:19+08:00</lastmod>
-<image:image>
-<image:loc>https://zzsblog.top/media/posts/8/download1</image:loc>
-<image:title><![CDATA[white concrete building near green trees during daytime]]></image:title>
-</image:image>
-<image:image>
-<image:loc>https://zzsblog.top/media/posts/8/tcapcha-screenshot.png</image:loc>
-<image:title><![CDATA[Image description]]></image:title>
-</image:image>
-</url>
-<url>
-<loc>https://zzsblog.top/underscore-in-python-number.html</loc>
-<lastmod>2026-06-13T22:48:47+08:00</lastmod>
-<image:image>
-<image:loc>https://zzsblog.top/media/posts/5/download1-2</image:loc>
-<image:title><![CDATA[assorted numbers]]></image:title>
-</image:image>
-</url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://zzsblog.top/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://zzsblog.top/blog</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zzsblog.top/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://zzsblog.top/donate</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zzsblog.top/blog/data-racing-caused-by-init-order</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zzsblog.top/blog/publii-shou-dong-tong-bu-gitcang-ku</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zzsblog.top/blog/enable-typing-for-yacs-config</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zzsblog.top/blog/run-matlab-in-vscode-jupyter</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zzsblog.top/blog/edit-exif-header</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zzsblog.top/blog/async-re-sub</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zzsblog.top/blog/ssh-reverse-proxy</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zzsblog.top/blog/parsing-irregular-json</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zzsblog.top/blog/tcaptcha</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zzsblog.top/blog/pytorch-detect-nan</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zzsblog.top/blog/underscore-in-python-number</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zzsblog.top/categories/coding</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://zzsblog.top/tags/coding</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://zzsblog.top/tags/qzone2tg</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://zzsblog.top/tags/cxx</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://zzsblog.top/tags/python</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://zzsblog.top/tags/shell</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://zzsblog.top/tags/pytorch</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://zzsblog.top/tags/matlab</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://zzsblog.top/tags/localauth</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://zzsblog.top/authors/jamzumsum</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zzsblog.top/donate</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
