@@ -6,6 +6,14 @@
     <description>Lire, c'est toujours relire.</description>
     <language>en-us</language>
     <item>
+      <title>ticket-print: 纯前端单页PDF排版</title>
+      <link>https://zzsblog.top/blog/ticket-print-a-web-based-pdf-composing-tool</link>
+      <guid isPermaLink="true">https://zzsblog.top/blog/ticket-print-a-web-based-pdf-composing-tool</guid>
+      <pubDate>Sat, 25 Jul 2026 00:00:00 GMT</pubDate>
+      <dc:creator>JamzumSum</dc:creator>
+      <description>纯前端实现的 PDF 排版工具，支持自定义排版参数和拖拽换序，让你的差旅报销更省心</description>
+    </item>
+    <item>
       <title>记一次多线程排障</title>
       <link>https://zzsblog.top/blog/data-racing-caused-by-init-order</link>
       <guid isPermaLink="true">https://zzsblog.top/blog/data-racing-caused-by-init-order</guid>

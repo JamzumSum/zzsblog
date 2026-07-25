@@ -21,8 +21,14 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://zzsblog.top/blog/ticket-print-a-web-based-pdf-composing-tool</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://zzsblog.top/blog/data-racing-caused-by-init-order</loc>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-07-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -92,12 +98,12 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://zzsblog.top/tags/coding</loc>
+    <loc>https://zzsblog.top/categories/products</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.4</priority>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://zzsblog.top/tags/qzone2tg</loc>
+    <loc>https://zzsblog.top/tags/coding</loc>
     <changefreq>weekly</changefreq>
     <priority>0.4</priority>
   </url>
@@ -128,6 +134,16 @@
   </url>
   <url>
     <loc>https://zzsblog.top/tags/localauth</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://zzsblog.top/tags/vibe-coding</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://zzsblog.top/tags/products</loc>
     <changefreq>weekly</changefreq>
     <priority>0.4</priority>
   </url>
