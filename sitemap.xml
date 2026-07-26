@@ -21,6 +21,18 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://zzsblog.top/blog/qzone3tgba-qq-kong-jian-ban-dao-telegramyi-ge-kai-yuan-ji-qi-ren-shi-ru-he-lian-cheng-de</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zzsblog.top/blog/aioqzonedang-python-yi-bu-yu-shang-qq-kong-jianyi-ge-kai-yuan-sdk-de-dan-sheng</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://zzsblog.top/blog/ticket-print-a-web-based-pdf-composing-tool</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>monthly</changefreq>
@@ -58,7 +70,7 @@
   </url>
   <url>
     <loc>https://zzsblog.top/blog/async-re-sub</loc>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -70,13 +82,13 @@
   </url>
   <url>
     <loc>https://zzsblog.top/blog/parsing-irregular-json</loc>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://zzsblog.top/blog/tcaptcha</loc>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -148,7 +160,17 @@
     <priority>0.4</priority>
   </url>
   <url>
+    <loc>https://zzsblog.top/tags/aioqzone</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
     <loc>https://zzsblog.top/authors/jamzumsum</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zzsblog.top/authors/aioqzone</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

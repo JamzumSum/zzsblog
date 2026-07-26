@@ -6,6 +6,22 @@
     <description>Lire, c'est toujours relire.</description>
     <language>en-us</language>
     <item>
+      <title>Qzone3TG：把 QQ 空间搬到 Telegram，一个开源机器人是如何炼成的</title>
+      <link>https://zzsblog.top/blog/qzone3tgba-qq-kong-jian-ban-dao-telegramyi-ge-kai-yuan-ji-qi-ren-shi-ru-he-lian-cheng-de</link>
+      <guid isPermaLink="true">https://zzsblog.top/blog/qzone3tgba-qq-kong-jian-ban-dao-telegramyi-ge-kai-yuan-ji-qi-ren-shi-ru-he-lian-cheng-de</guid>
+      <pubDate>Sun, 26 Jul 2026 00:00:00 GMT</pubDate>
+      <dc:creator>aioqzone</dc:creator>
+      <description>Qzone3TG：转发 Qzone 到 Telegram 的机器人</description>
+    </item>
+    <item>
+      <title>aioqzone：当 Python 异步遇上 QQ 空间，一个开源 SDK 的诞生</title>
+      <link>https://zzsblog.top/blog/aioqzonedang-python-yi-bu-yu-shang-qq-kong-jianyi-ge-kai-yuan-sdk-de-dan-sheng</link>
+      <guid isPermaLink="true">https://zzsblog.top/blog/aioqzonedang-python-yi-bu-yu-shang-qq-kong-jianyi-ge-kai-yuan-sdk-de-dan-sheng</guid>
+      <pubDate>Sun, 26 Jul 2026 00:00:00 GMT</pubDate>
+      <dc:creator>aioqzone</dc:creator>
+      <description>aioqzone: 异步 Qzone API 封装库</description>
+    </item>
+    <item>
       <title>ticket-print: 纯前端单页PDF排版</title>
       <link>https://zzsblog.top/blog/ticket-print-a-web-based-pdf-composing-tool</link>
       <guid isPermaLink="true">https://zzsblog.top/blog/ticket-print-a-web-based-pdf-composing-tool</guid>
